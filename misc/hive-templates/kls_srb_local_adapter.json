@@ -1,0 +1,32 @@
+{
+    "isFavorite": false,
+    "items": [
+        {
+            "coin": "NTL",
+            "pool_ssl": false,
+            "dpool_ssl": false,
+            "miner": "srbminer",
+            "miner_config": {
+                "url": "127.0.0.1:5555",
+                "algo": "karlsen",
+                "worker": "%WORKER_NAME%",
+                "user_config": "--disable-cpu"
+            },
+            "pool_geo": []
+        },
+        {
+            "coin": "NTL",
+            "pool_ssl": false,
+            "dpool_ssl": false,
+            "miner": "custom",
+            "miner_alt": "ntl_bridge",
+            "miner_config": {
+                "url": "YOUR_NAUTILIAD_NODE_IP_HERE:38110",
+                "miner": "ntl_bridge",
+                "template": "doesnt.matter",
+                "install_url": "https://github.com/GRinvestPOOL/nautilus-stratum-bridge/releases/download/v1.0.0/ntl_bridge-1.0.0_hive.tar.gz"
+            },
+            "pool_geo": []
+        }
+    ]
+}

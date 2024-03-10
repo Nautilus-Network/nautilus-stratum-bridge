@@ -1,0 +1,19 @@
+services:
+  ntl_bridge:
+    build:
+      context: .
+      no_cache: true
+    container_name: ntl_bridge
+    restart: unless-stopped
+    user: "0"
+    command:
+      - '-log=true'
+      - '-stats=false'
+      - '-stratum=:5555'
+      - '-prom=:2114'
+      - '-nautilus=host.docker.internal:38110'
+    ports:
+      - 5555:5555
+      - 2114:2114
+    extra_hosts:
+      - host.docker.internal:host-gateway
